@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='email.png')}}">
+  <link rel="stylesheet"  type="text/css" href="{{url_for('static', filename='mailapp.css')}}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>GETMAIL RESULT</title>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <div class="container">
+  <h1 id="titulo"> SERVEI CONSULTA MAIL</h1>
+{% if correu == "NOTROBAT" %}
+  <h2>El nom <b>{{ nom }}</b> no l'hem trobat a les nostres dades.</h2>
+{% else %}
+  <h2>El correu per <b>{{ nom }}</b> és: <b>{{ correu }}</b> </h2>
+{% endif %}
+<h4 class="text-enlace">
+  Pots fer una nova consulta a l'enllaç <a href="{{url_for('getmail')}}">GETMAIL</a>,
+</h4>
+<h4 class="text-enlace2">
+  o pots afegir nous correus a l'enllaç <a href="{{url_for('addmail')}}" target="_blank">ADDMAIL</a>
+</h4>
+</div>
+</body>
+</html>

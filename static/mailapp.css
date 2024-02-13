@@ -1,0 +1,12 @@
+h1 {background-color: rgb(62, 255, 158);
+    text-align: center;}
+
+h2, h3 {text-align: center;}
+
+#titulo {margin-bottom: 30px;}
+
+.text-enlace, .text-enlace2 {text-align:right}
+.text-enlace {margin-top: 30px;}
+
+.required:after {   content:"*";
+                    color:red}
